@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  position: relative;
+}
+
+nav {
+  margin-top: 100px;
+  font-size: 1.3rem;
+  display: Flex;
+  justify-content: space-between;
+  width: 250px;
+}
+
+.gray {
+  color: rgb(192, 192, 192);
+}
+
+.tooltip-projects {
+  position: absolute;
+  top: 35px;
+  left: -15px;
+  background-color: black;
+  color: white;
+  padding: 15px 20px;
+  white-space: nowrap;
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.tooltip-home {
+  position: absolute;
+  top: 0px;
+  left: -45px;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  padding: 15px 20px;
+  white-space: nowrap;
+  border-radius: 15px;
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.tooltip-blog {
+  position: absolute;
+  top: 35px;
+  left: 1000px;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  padding: 15px 20px;
+  white-space: nowrap;
+  border-radius: 15px;
+  opacity: 0;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.tooltip-blog .black {
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  transform: rotate(45deg);
+  left: 65px;
+}
+
+.tooltip-home .black {
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  transform: rotate(45deg);
+  left: 65px;
+}
+
+.tooltip-projects .black {
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  transform: rotate(45deg);
+  left: 140px;
+}
+
+.projects:hover .tooltip-projects {
+  opacity: 1;
+}
+
+.home:hover .tooltip-home {
+  opacity: 1;
+  top: 35px;
+  left: -45px;
+}
+
+.blog:hover .tooltip-blog {
+  opacity: 1;
+  left: 155px;
+}
